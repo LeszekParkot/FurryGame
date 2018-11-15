@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #bbb; }
+
+section#score {
+  width: 100%; }
+  section#score > div {
+    width: 10em;
+    height: 80px;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 0.5em;
+    background-color: rgba(211, 211, 211, 0.75);
+    border: 1px solid lightgray;
+    border-radius: 1px;
+    box-shadow: 1px 1px 5px 1px lightgray;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-around; }
+  section#score p {
+    margin: 0;
+    margin-bottom: 5px; }
+  section#score span {
+    font-weight: bold; }
+
+#board {
+  width: 500px;
+  height: 500px;
+  margin: 1em auto;
+  background-color: #00a000; }
+  #board > div {
+    border: 1px solid black;
+    float: left;
+    width: 50px;
+    height: 50px; }
+
+.furry {
+  background-image: url(images/furry.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.coin {
+  background-image: url(images/coin.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+section#over {
+  position: absolute;
+  width: 100%;
+  top: 200px;
+  padding: 0 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear; }
+  section#over div {
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px #393939;
+    font-weight: bold;
+    font-size: 5rem;
+    margin: auto;
+    padding: 30px;
+    height: 250px;
+    max-width: 600px;
+    background: radial-gradient(lightblue, blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 5px solid darkblue; }
+  section#over.visible {
+    visibility: visible;
+    opacity: 1; }
+
+.invisible {
+  display: none; }
+
+.arrow {
+  background-image: url(images/arrow.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#board > div.borderLeft {
+  border-left: 4px dotted darkred; }
+
+#board > div.borderRight {
+  border-right: 4px dotted darkred; }
+
+#board > div.borderTop {
+  border-top: 4px dotted darkred; }
+
+#board > div.borderBottom {
+  border-bottom: 4px dotted darkred; }
+
+#board > div.borderLeftTop {
+  border-left: 4px dotted darkred;
+  border-top: 4px dotted darkred; }
+
+#board > div.borderRightTop {
+  border-right: 4px dotted darkred;
+  border-top: 4px dotted darkred; }
+
+#board > div.borderLefyBottom {
+  border-left: 4px dotted darkred;
+  border-bottom: 4px dotted darkred; }
+
+#board > div.borderRightBottom {
+  border-right: 4px dotted darkred;
+  border-bottom: 4px dotted darkred; }
+
+#lvlUp {
+  position: absolute;
+  width: 100%;
+  top: 300px;
+  padding: 0 30px;
+  opacity: 0;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: yellow; }
+  #lvlUp.lvlUp {
+    animation: lvlUp linear 0.9s; }
+
+@keyframes lvlUp {
+  0% {
+    opacity: 0.2; }
+  15% {
+    opacity: 0.4; }
+  30% {
+    opacity: 0.6; }
+  80% {
+    opacity: 0.6; }
+  90% {
+    opacity: 0.4; }
+  100% {
+    opacity: 0.2; } }
+
+#info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(100, 155, 100, 0.5);
+  padding-top: 50px; }
+  #info div {
+    position: relative;
+    width: 380px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.2rem; }
+    #info div p {
+      text-align: center;
+      text-transform: uppercase; }
+    #info div ul {
+      padding-left: 30px;
+      padding-right: 20px;
+      margin: 30px 0px;
+      line-height: 1.5rem; }
+    #info div li {
+      margin: 10px 0; }
+
+.close {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3; }
+  .close:hover {
+    opacity: 1; }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333; }
+  .close:before {
+    transform: rotate(45deg); }
+  .close:after {
+    transform: rotate(-45deg); }

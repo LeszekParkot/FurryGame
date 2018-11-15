@@ -1,0 +1,30 @@
+#board > div{
+  &.borderLeft{
+    border-left: 4px dotted darkred;
+  }
+  &.borderRight{
+    border-right: 4px dotted darkred;
+  }
+  &.borderTop{
+    border-top: 4px dotted darkred;
+  }
+  &.borderBottom{
+    border-bottom: 4px dotted darkred;
+  }
+  &.borderLeftTop{
+    border-left: 4px dotted darkred;
+    border-top: 4px dotted darkred;
+  }
+  &.borderRightTop{
+    border-right: 4px dotted darkred;
+    border-top: 4px dotted darkred;
+  }
+  &.borderLefyBottom{
+    border-left: 4px dotted darkred;
+    border-bottom: 4px dotted darkred;
+  }
+  &.borderRightBottom{
+    border-right: 4px dotted darkred;
+    border-bottom: 4px dotted darkred;
+  }
+}

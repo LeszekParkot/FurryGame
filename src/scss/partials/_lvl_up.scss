@@ -1,0 +1,36 @@
+#lvlUp {
+  position: absolute;
+  width: 100%;
+  top: 300px;
+  padding: 0 30px;
+  opacity: 0;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: yellow;
+  &.lvlUp{
+    animation: lvlUp linear 0.9s;
+  }
+}
+
+@keyframes lvlUp {
+  0% {
+    opacity: 0.2;
+  }
+  15% {
+    opacity: 0.4;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
